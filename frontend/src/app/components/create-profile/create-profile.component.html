@@ -1,0 +1,16 @@
+<h1>Create Profile</h1>
+<hr />
+<form [formGroup]="form" (submit)="onSubmit()">
+  <div>
+    <input formControlName="name" type="text" placeholder="Enter name..." />
+  </div>
+  <div>
+    <input (change)="onFileSelect($event)" type="file" />
+  </div>
+  <div *ngIf="imageData">
+    <img [src]="imageData" [alt]="form.value.name" />
+  </div>
+  <div>
+    <button type="submit">Create profile</button>
+  </div>
+</form>

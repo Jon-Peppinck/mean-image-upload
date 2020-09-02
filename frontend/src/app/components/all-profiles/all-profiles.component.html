@@ -1,0 +1,10 @@
+<h1>All Profiles</h1>
+<hr />
+<div *ngIf="profiles.length > 0">
+  <div *ngFor="let profile of profiles" class="profile">
+    <img [src]="profile.imagePath" [alt]="profile.name" />
+    <div>
+      <span>{{ profile.name }}</span>
+    </div>
+  </div>
+</div>
